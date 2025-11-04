@@ -20,7 +20,8 @@ if (
         (username === "student" && password === "student123" && role === "student")
       ) {
         localStorage.setItem("loggedUser", role);
-        window.location.href = `${window.location.origin}${window.location.pathname.replace(/index\.html?$/, "")}dashboard.html`;
+        window.location.href = "https://raviteja1357.github.io/student-wellness-platform/dashboard.html";
+
       } else {
         errorMsg.textContent = "Invalid credentials! Try again.";
       }
