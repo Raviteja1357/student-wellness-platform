@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | Student Wellness Platform</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Student Health & Wellness Platform</h1>
+    <nav>
+      <a href="#resources">Health Resources</a>
+      <a href="#programs">Wellness Programs</a>
+      <a href="#support">Support Services</a>
+      <button id="logout-btn" class="logout-btn">Logout</button>
+    </nav>
+  </header>
+
+  <main>
+    <h3 id="welcomeMsg"></h3>
+
+    <!-- Sections -->
+    <section id="resources" class="expandable">
+      <h2>Health Resources</h2>
+      <p>Find articles and videos on mental health, fitness, and nutrition.</p>
+      <div class="options hidden">
+        <button onclick="showContent('mental')">🧠 Mental Health</button>
+        <button onclick="showContent('fitness')">💪 Fitness</button>
+        <button onclick="showContent('nutrition')">🥗 Nutrition</button>
+      </div>
+      <div id="resources-content" class="details"></div>
+    </section>
+
+    <section id="programs" class="expandable">
+      <h2>Wellness Programs</h2>
+      <p>Join our weekly yoga, meditation, and fitness programs.</p>
+      <div class="options hidden">
+        <button onclick="showContent('yoga')">🧘 Yoga Sessions</button>
+        <button onclick="showContent('meditation')">🕊️ Meditation</button>
+        <button onclick="showContent('fitness-program')">🏋️ Fitness Program</button>
+      </div>
+      <div id="programs-content" class="details"></div>
+    </section>
+
+    <section id="support" class="expandable">
+      <h2>Support Services</h2>
+      <p>Get in touch with counselors and peer mentors for guidance.</p>
+      <div class="options hidden">
+        <button onclick="showContent('counselor')">👩‍⚕️ Talk to a Counselor</button>
+        <button onclick="showContent('peer-support')">👫 Peer Support</button>
+      </div>
+      <div id="support-content" class="details"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Student Wellness Platform</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7fb;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #007acc;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a, nav button {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background: #ff4d4d;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: white;
+}
+
+section {
+  background: white;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.options button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #007acc;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.options button:hover {
+  background-color: #005fa3;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Login Page Styles */
+.login-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e6f0fa;
+}
+
+.login-container {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.login-container input,
+.login-container select {
+  width: 90%;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.login-container button {
+  width: 95%;
+  padding: 10px;
+  background-color: #007acc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.login-container button:hover {
+  background-color: #005fa3;
+}
+
+.error {
+  color: red;
+  font-size: 14px;
+}
