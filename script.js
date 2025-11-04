@@ -20,7 +20,7 @@ if (
         (username === "student" && password === "student123" && role === "student")
       ) {
         localStorage.setItem("loggedUser", role);
-        window.location.href = "dashboard.html";
+        window.location.href = `${window.location.origin}${window.location.pathname.replace(/index\.html?$/, "")}dashboard.html`;
       } else {
         errorMsg.textContent = "Invalid credentials! Try again.";
       }
