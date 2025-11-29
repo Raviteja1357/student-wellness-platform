@@ -112,3 +112,32 @@ if (logout) {
     window.location.href = "index.html";
   });
 }
+function sendSuggestion() {
+  const text = document.getElementById("suggestionInput").value;
+
+  fetch("http://localhost:5000/suggestions", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ text })
+  })
+  .then(res => res.json())
+  .then(data => {
+    alert("Suggestion submitted!");
+    loadSuggestions(); // refresh list
+  })
+  .catch(err => console.log(err));
+}
+function loadSuggestions() {
+  fetch("http://localhost:5000/suggestions")
+    .then(res => res.json())
+    .then(data => {
+      let box = document.getElementById("suggestionsList");
+      box.innerHTML = "";
+
+      data.forEach(item => {
+        box.innerHTML += `<p>${item.text} <small>${new Date(item.date).toLocaleString()}</small></p>`;
+      });
+    })
+    .catch(err => console.log(err));
+}
+window.onload = loadSuggestions;
