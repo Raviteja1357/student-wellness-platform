@@ -10,11 +10,13 @@
   <header>
     <h1>Student Health & Wellness Platform</h1>
     <nav>
-      <a href="#resources">Health Resources</a>
-      <a href="#programs">Wellness Programs</a>
-      <a href="#support">Support Services</a>
-      <button id="logout-btn" class="logout-btn">Logout</button>
+     <a href="#resources">Health Resources</a>
+     <a href="#programs">Wellness Programs</a>
+     <a href="#support">Support Services</a>
+     <a href="suggestions.html">Personal Suggestions</a>   <!-- New Link -->
+     <button id="logout-btn" class="logout-btn">Logout</button>
     </nav>
+
   </header>
 
   <main>
@@ -52,6 +54,14 @@
       </div>
       <div id="support-content" class="details"></div>
     </section>
+
+    <!-- ADMIN ONLY SECTION -->
+    <section id="admin-panel" class="hidden">
+      <h2>Admin Panel</h2>
+      <button onclick="alert('Add Resource feature coming soon')">➕ Add New Resource</button>
+      <button onclick="alert('Usage analytics coming soon')">📊 View Usage Metrics</button>
+    </section>
+
   </main>
 
   <footer>

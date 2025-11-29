@@ -55,6 +55,19 @@ section {
   display: none;
 }
 
+/* Hover expansion */
+section:hover {
+  transform: scale(1.01);
+  transition: 0.3s ease-in-out;
+}
+
+.details {
+  padding-top: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
 /* Login Page Styles */
 .login-body {
   display: flex;

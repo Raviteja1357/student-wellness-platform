@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Suggestions</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f3f7fd; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; }
+        input, textarea { width: 100%; padding: 12px; margin-top: 10px; }
+        button { padding: 12px; background: #1e90ff; color: white; border: none; margin-top: 10px; width: 100%; }
+        #output { margin-top: 20px; padding: 15px; background: #e6f4ff; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Personal Health Assistant</h2>
+    <p>Describe your current health concern or goal:</p>
+
+    <textarea id="userInput" placeholder="e.g. I feel stressed or I want to lose weight"></textarea>
+    <button onclick="generateSuggestion()">Get Suggestions</button>
+
+    <div id="output"></div>
+</div>
+
+<script>
+    function generateSuggestion() {
+        let input = document.getElementById("userInput").value.toLowerCase();
+        let result = "";
+
+        if (input.includes("stress") || input.includes("anxiety")) {
+            result = `
+                <h3>Mental Health Support Suggestions</h3>
+                <ul>
+                    <li>Practice meditation for 10 minutes daily</li>
+                    <li>Try deep breathing exercises</li>
+                    <li>Limit screen time and improve sleep</li>
+                    <li>Talk to a counselor or friend when needed</li>
+                </ul>
+            `;
+        }
+
+        else if (input.includes("lose weight")) {
+            result = `
+                <h3>Weight Loss Tips</h3>
+                <ul>
+                    <li>Exercise 30 minutes everyday (Walking, Cycling)</li>
+                    <li>Reduce sugar and junk food</li>
+                    <li>Increase fruits, vegetables and water intake</li>
+                </ul>
+            `;
+        }
+
+        else if (input.includes("gain weight")) {
+            result = `
+                <h3>Healthy Weight Gain Tips</h3>
+                <ul>
+                    <li>Eat protein rich food (eggs, milk, nuts, pulses)</li>
+                    <li>Exercise using weights</li>
+                    <li>Increase calories with healthy snacks</li>
+                </ul>
+            `;
+        }
+
+        else if (input.includes("stamina") || input.includes("fitness")) {
+            result = `
+                <h3>Fitness & Stamina Improvement</h3>
+                <ul>
+                    <li>Cardio workouts like running & skipping</li>
+                    <li>Stretching exercises daily</li>
+                    <li>Maintain hydration and proper sleep</li>
+                </ul>
+            `;
+        }
+
+        else {
+            result = "<strong>No suggestions found. Please provide more details.</strong>";
+        }
+
+        document.getElementById("output").innerHTML = result;
+    }
+</script>
+
+</body>
+</html>
